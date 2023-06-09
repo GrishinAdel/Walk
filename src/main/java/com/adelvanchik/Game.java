@@ -47,43 +47,11 @@ public class Game implements ILogic {
     public void init() throws Exception {
         render.init();
 
-        Model adel = loader.loadOBJModel("/models/cube.obj");
-        adel.setTexture(new Texture(loader.loadTexture("textures/adel.jpg")), 1f);
-
-        Model sasha = loader.loadOBJModel("/models/cube.obj");
-        sasha.setTexture(new Texture(loader.loadTexture("textures/alex.jpg")), 1f);
-
-        Model irina = loader.loadOBJModel("/models/cube.obj");
-        irina.setTexture(new Texture(loader.loadTexture("textures/irina.jpg")), 1f);
-
-        Model diana = loader.loadOBJModel("/models/cube.obj");
-        diana.setTexture(new Texture(loader.loadTexture("textures/diana.jpg")), 1f);
-
         entities = new ArrayList<>();
 
-        entities.add(new Entity(adel, new Vector3f(3,2,-1000),
-                new Vector3f(0,0,0),5));
-        entities.add(new Entity(irina, new Vector3f(9,2,-1000),
-                new Vector3f(0,0,0),5));
-        entities.add(new Entity(diana, new Vector3f(-3,2,-1000),
-                new Vector3f(0,0,0),5));
-        entities.add(new Entity(sasha, new Vector3f(-9,2,-1000),
-                new Vector3f(0,0,0),5));
 
-
-        Model non = loader.loadOBJModel("/models/cube.obj");
-        non.setTexture(new Texture(loader.loadTexture("textures/non.jpg")), 1f);
-        entities.add(new Entity(non, new Vector3f(-8,2,-1001),
-                new Vector3f(0,0,0),2));
-        entities.add(new Entity(non, new Vector3f(4,2,-1001),
-                new Vector3f(0,0,0),2));
-        entities.add(new Entity(non, new Vector3f(-4,2,-1001),
-                new Vector3f(0,0,0),2));
-        entities.add(new Entity(non, new Vector3f(8,2,-1001),
-                new Vector3f(0,0,0),2));
-
-        Model model = loader.loadOBJModel("/models/tree.obj");
-        model.setTexture(new Texture(loader.loadTexture("textures/tree_texture.jpg")), 1f);
+        Model model = loader.loadOBJModel("/models/cactus.obj");
+        model.setTexture(new Texture(loader.loadTexture("textures/cactus_texture.jpg")), 1f);
 
         terrains = new ArrayList<>();
         Terrain terrain = new Terrain(new Vector3f(-1600,-1,-1600), loader,

@@ -205,6 +205,4 @@ public class ObjectLoader {
             GL30.glDeleteTextures(texture);
         }
     }
-
-
 }
